@@ -1,0 +1,21 @@
+﻿@model List<HelloMVC.Models.Car> 
+    @using HelloMVC.Models;
+@{
+    ViewBag.Title = "FC's Stag";
+}
+
+<h1>@ViewBag.SubanCreatedThis</h1>
+
+@{ 
+    var user = Session["user"] as User;
+}
+
+@foreach (var car in Model)
+{
+    <p>@car.Id - @car.Make - @car.Model</p>
+}
+@if(user != null)
+{ <h3>Welcome @user.Name</h3>
+    @Html.ActionLink("Logout", "Logout", "Login");
+
+      }
