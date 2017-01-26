@@ -17,10 +17,10 @@ namespace HelloMVC.Controllers
                 return RedirectToAction("Login", "Login");
             }
 
-            var cars = HelloModel.GetCars();
-            ViewBag.SubanCreatedThis = "Fat Controller's Stag";
+            var stagees = HelloModel.GetStagees();
+            ViewBag.SubanCreatedThis = "The Team";
 
-            return View(cars);
+            return View(stagees);
         }
     }
 }
