@@ -1,4 +1,24 @@
-﻿@model List<HelloMVC.Models.Stagees> 
+﻿<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        table-layout: auto;
+}
+    }
+
+    td, th {
+        border: 1px solid #000000;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+
+@model List<HelloMVC.Models.Stagees> 
     @using HelloMVC.Models;
 @{
     ViewBag.Title = "FC's Stag";
@@ -9,13 +29,32 @@
 @{ 
     var user = Session["user"] as User;
 }
+<table>
+    <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Group Flight</th>
+        <th>Payment Status</th>
+        
+    </tr>
 
-@foreach (var stagees in Model)
-{
-    <p>@stagees.Id. @stagees.Name</p>
-}
-@if(user != null)
-{ <h3>Welcome @user.Name</h3>
+
+    @foreach (var stagees in Model)
+    {
+        <tr>
+            <th>@stagees.Id.</th>
+            <th>@stagees.Name</th>
+            <th>@stagees.GroupFlight</th>
+            <th>@stagees.PaymentStatus</th>
+            
+        </tr>
+
+    }
+</table>
+
+    @if (user != null)
+    {
+    <h3>Welcome @user.Name</h3>
     @Html.ActionLink("Logout", "Logout", "Login");
 
-      }
+    }

@@ -11,22 +11,22 @@ namespace HelloMVC.Models
         {
             List<Stagees> stagees = new List<Stagees>
             {
-                new Stagees {Id = 1,Name = "Saz" },
-                new Stagees {Id = 2,Name="Sub"},
-                new Stagees {Id = 3,Name="Vicks"},
-                new Stagees {Id = 4,Name="Fus"},
-                new Stagees {Id = 5,Name="Rogs"},
-                new Stagees {Id = 6,Name="James"},
-                new Stagees {Id = 7,Name="Ketan"},
-                new Stagees {Id = 8,Name="Pritesh"},
-                new Stagees {Id = 9,Name="Kiran"},
-                new Stagees {Id = 10,Name="Vishal"},
-                new Stagees {Id = 11,Name="Gops"},
-                new Stagees {Id = 12,Name="Rags"},
-                new Stagees {Id = 13,Name="Bavan"},
-                new Stagees {Id = 14,Name="Jana"},
-                new Stagees {Id = 15,Name="Mayu"},
-                new Stagees {Id = 16,Name="Raz"},
+                new Stagees {Id = 1,Name = "Saz",GroupFlight="Yes",PaymentStatus ="N/A" },
+                new Stagees {Id = 2,Name="Sub",GroupFlight="Yes",PaymentStatus ="Paid" },
+                new Stagees {Id = 3,Name="Vicks",GroupFlight="Yes",PaymentStatus ="Paid"},
+                new Stagees {Id = 4,Name="Fus",GroupFlight="Independent",PaymentStatus ="N/A"},
+                new Stagees {Id = 5,Name="Rogs",GroupFlight="Yes",PaymentStatus ="Paid"},
+                new Stagees {Id = 6,Name="James",GroupFlight="Incoming",PaymentStatus ="Paid"},
+                new Stagees {Id = 7,Name="Ketan",GroupFlight="Yes",PaymentStatus ="Paid"},
+                new Stagees {Id = 8,Name="Pritesh",GroupFlight="Yes",PaymentStatus ="Not Paid"},
+                new Stagees {Id = 9,Name="Kiran",GroupFlight="Yes",PaymentStatus ="Not Paid"},
+                new Stagees {Id = 10,Name="Vishal",GroupFlight="Yes",PaymentStatus ="Not Paid"},
+                new Stagees {Id = 11,Name="Gops",GroupFlight="Yes",PaymentStatus ="Not Paid"},
+                new Stagees {Id = 12,Name="Rags",GroupFlight="Independent",PaymentStatus ="N/A"},
+                new Stagees {Id = 13,Name="Bavan",GroupFlight="Yes",PaymentStatus ="N/A"},
+                new Stagees {Id = 14,Name="Jana",GroupFlight="Independent",PaymentStatus ="N/A"},
+                new Stagees {Id = 15,Name="Mayu",GroupFlight="Independent",PaymentStatus ="N/A"},
+                new Stagees {Id = 16,Name="Raz",GroupFlight="Independent",PaymentStatus ="N/A"},
             };
             return stagees;
         }
@@ -36,6 +36,7 @@ namespace HelloMVC.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Model { get; set; }
+        public string GroupFlight { get; set; }
+        public string PaymentStatus { get; set; }
     }
 }
